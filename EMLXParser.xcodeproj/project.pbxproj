@@ -1,0 +1,256 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F07BC9A1515134C00545A12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F07BC991515134C00545A12 /* Foundation.framework */; };
+		6F07BC9D1515134C00545A12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F07BC9C1515134C00545A12 /* main.m */; };
+		6F07BCA91515135E00545A12 /* MEXEMLXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F07BCA81515135E00545A12 /* MEXEMLXParser.m */; };
+		6F07BCAC15151B8A00545A12 /* NSString+MEXAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F07BCAB15151B8A00545A12 /* NSString+MEXAddons.m */; };
+		6F07BCAF151537BE00545A12 /* MEXBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F07BCAE151537BE00545A12 /* MEXBase64.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6F07BC931515134C00545A12 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6F07BC951515134C00545A12 /* EMLXParser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EMLXParser; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F07BC991515134C00545A12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6F07BC9C1515134C00545A12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6F07BC9F1515134C00545A12 /* EMLXParser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EMLXParser-Prefix.pch"; sourceTree = "<group>"; };
+		6F07BCA71515135E00545A12 /* MEXEMLXParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEXEMLXParser.h; sourceTree = "<group>"; };
+		6F07BCA81515135E00545A12 /* MEXEMLXParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEXEMLXParser.m; sourceTree = "<group>"; };
+		6F07BCAA15151B8A00545A12 /* NSString+MEXAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MEXAddons.h"; sourceTree = "<group>"; };
+		6F07BCAB15151B8A00545A12 /* NSString+MEXAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MEXAddons.m"; sourceTree = "<group>"; };
+		6F07BCAD151537BE00545A12 /* MEXBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEXBase64.h; sourceTree = "<group>"; };
+		6F07BCAE151537BE00545A12 /* MEXBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEXBase64.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F07BC921515134C00545A12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F07BC9A1515134C00545A12 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F07BC8A1515134C00545A12 = {
+			isa = PBXGroup;
+			children = (
+				6F07BC9B1515134C00545A12 /* EMLXParser */,
+				6F07BC981515134C00545A12 /* Frameworks */,
+				6F07BC961515134C00545A12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F07BC961515134C00545A12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F07BC951515134C00545A12 /* EMLXParser */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F07BC981515134C00545A12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F07BC991515134C00545A12 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F07BC9B1515134C00545A12 /* EMLXParser */ = {
+			isa = PBXGroup;
+			children = (
+				6F07BCAA15151B8A00545A12 /* NSString+MEXAddons.h */,
+				6F07BCAB15151B8A00545A12 /* NSString+MEXAddons.m */,
+				6F07BCA71515135E00545A12 /* MEXEMLXParser.h */,
+				6F07BCA81515135E00545A12 /* MEXEMLXParser.m */,
+				6F07BCAD151537BE00545A12 /* MEXBase64.h */,
+				6F07BCAE151537BE00545A12 /* MEXBase64.m */,
+				6F07BC9C1515134C00545A12 /* main.m */,
+				6F07BC9E1515134C00545A12 /* Supporting Files */,
+			);
+			path = EMLXParser;
+			sourceTree = "<group>";
+		};
+		6F07BC9E1515134C00545A12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F07BC9F1515134C00545A12 /* EMLXParser-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F07BC941515134C00545A12 /* EMLXParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F07BCA41515134C00545A12 /* Build configuration list for PBXNativeTarget "EMLXParser" */;
+			buildPhases = (
+				6F07BC911515134C00545A12 /* Sources */,
+				6F07BC921515134C00545A12 /* Frameworks */,
+				6F07BC931515134C00545A12 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EMLXParser;
+			productName = EMLXParser;
+			productReference = 6F07BC951515134C00545A12 /* EMLXParser */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F07BC8C1515134C00545A12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Bitten Apps";
+			};
+			buildConfigurationList = 6F07BC8F1515134C00545A12 /* Build configuration list for PBXProject "EMLXParser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6F07BC8A1515134C00545A12;
+			productRefGroup = 6F07BC961515134C00545A12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F07BC941515134C00545A12 /* EMLXParser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F07BC911515134C00545A12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F07BC9D1515134C00545A12 /* main.m in Sources */,
+				6F07BCA91515135E00545A12 /* MEXEMLXParser.m in Sources */,
+				6F07BCAC15151B8A00545A12 /* NSString+MEXAddons.m in Sources */,
+				6F07BCAF151537BE00545A12 /* MEXBase64.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6F07BCA21515134C00545A12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6F07BCA31515134C00545A12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6F07BCA51515134C00545A12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EMLXParser/EMLXParser-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6F07BCA61515134C00545A12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EMLXParser/EMLXParser-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F07BC8F1515134C00545A12 /* Build configuration list for PBXProject "EMLXParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F07BCA21515134C00545A12 /* Debug */,
+				6F07BCA31515134C00545A12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F07BCA41515134C00545A12 /* Build configuration list for PBXNativeTarget "EMLXParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F07BCA51515134C00545A12 /* Debug */,
+				6F07BCA61515134C00545A12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F07BC8C1515134C00545A12 /* Project object */;
+}
