@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F076771152B89DF00819B0E /* MEXEMLXFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F076770152B89DF00819B0E /* MEXEMLXFinder.m */; };
 		6F07BC9A1515134C00545A12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F07BC991515134C00545A12 /* Foundation.framework */; };
 		6F07BC9D1515134C00545A12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F07BC9C1515134C00545A12 /* main.m */; };
 		6F07BCA91515135E00545A12 /* MEXEMLXParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F07BCA81515135E00545A12 /* MEXEMLXParser.m */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6F07676F152B89DF00819B0E /* MEXEMLXFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEXEMLXFinder.h; sourceTree = "<group>"; };
+		6F076770152B89DF00819B0E /* MEXEMLXFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEXEMLXFinder.m; sourceTree = "<group>"; };
 		6F07BC951515134C00545A12 /* EMLXParser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EMLXParser; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F07BC991515134C00545A12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6F07BC9C1515134C00545A12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				6F07BCAB15151B8A00545A12 /* NSString+MEXAddons.m */,
 				6F07BCA71515135E00545A12 /* MEXEMLXParser.h */,
 				6F07BCA81515135E00545A12 /* MEXEMLXParser.m */,
+				6F07676F152B89DF00819B0E /* MEXEMLXFinder.h */,
+				6F076770152B89DF00819B0E /* MEXEMLXFinder.m */,
 				6F07BCAD151537BE00545A12 /* MEXBase64.h */,
 				6F07BCAE151537BE00545A12 /* MEXBase64.m */,
 				6F07BC9C1515134C00545A12 /* main.m */,
@@ -154,6 +159,7 @@
 				6F07BCA91515135E00545A12 /* MEXEMLXParser.m in Sources */,
 				6F07BCAC15151B8A00545A12 /* NSString+MEXAddons.m in Sources */,
 				6F07BCAF151537BE00545A12 /* MEXBase64.m in Sources */,
+				6F076771152B89DF00819B0E /* MEXEMLXFinder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

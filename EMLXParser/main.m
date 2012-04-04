@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MEXEMLXFinder.h"
 #import "MEXEMLXParser.h"
 
 int main(int argc, const char * argv[])
@@ -18,7 +19,27 @@ int main(int argc, const char * argv[])
         // insert code here...
         NSLog(@"Hello, World!");
         
-        MEXEMLXParser *parser = [[MEXEMLXParser alloc] initWithEMLXFile:[NSURL URLWithString:@"/Users/MegaEduX/normal.emlx"]];
+        NSLog(@"EMLX Paths: %@", [MEXEMLXFinder mailDraftsURLs]);
+        
+        for (NSURL *anURL in [MEXEMLXFinder mailDraftsURLs]) {
+            MEXEMLXParser *parser = [[MEXEMLXParser alloc] initWithEMLXFile:anURL];
+            
+            NSLog(@"Subject: %@", parser.subject);
+            
+            NSLog(@"Recipent: %@", parser.to);
+            
+            NSLog(@"Sender: %@", parser.sender);
+            
+            NSLog(@"Cc: %@", parser.cc);
+            
+            NSLog(@"Bcc: %@", parser.bcc);
+            
+            NSLog(@"Attachments: %@", parser.attachments);
+            
+            NSLog(@"Body: %@", parser.messageBody);
+        }
+        
+        /*MEXEMLXParser *parser = [[MEXEMLXParser alloc] initWithEMLXFile:[NSURL URLWithString:@"/Users/MegaEduX/normal.emlx"]];
         
         NSLog(@"Subject: %@", parser.subject);
         
@@ -32,7 +53,7 @@ int main(int argc, const char * argv[])
         
         NSLog(@"Attachments: %@", parser.attachments);
         
-        NSLog(@"Body: %@", parser.messageBody);
+        NSLog(@"Body: %@", parser.messageBody);*/
         
     }
     

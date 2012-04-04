@@ -169,9 +169,11 @@
                 
                 NSString *strToRemove = [part stringBetweenString:@"<object type=\"application/x-apple-msg-attachment\"" andString:@"</object>"];
                 
-                strToRemove = [[@"<object type=\"application/x-apple-msg-attachment\"" stringByAppendingString:strToRemove] stringByAppendingString:@"</object>"];
-                
-                htmlStr = [htmlStr stringByRemovingSubstring:strToRemove];
+                if (strToRemove) {
+                    strToRemove = [[@"<object type=\"application/x-apple-msg-attachment\"" stringByAppendingString:strToRemove] stringByAppendingString:@"</object>"];
+                    
+                    htmlStr = [htmlStr stringByRemovingSubstring:strToRemove];
+                }
                 
                 return htmlStr;
             }
