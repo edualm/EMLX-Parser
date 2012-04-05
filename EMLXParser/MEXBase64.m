@@ -1,8 +1,3 @@
-//
-//  MEXBase64.m
-//  EMLXParser
-//
-
 /*
  
  Copyright (c) 2010 - 2011, Quasidea Development, LLC

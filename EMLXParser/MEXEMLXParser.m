@@ -241,4 +241,77 @@
 
 }
 
+- (NSArray *)attachmentPathsDumpedToFolder:(NSString *)path cleaningFolder:(BOOL)shouldCleanFolder {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path])
+        if (![[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil]) {
+            NSLog(@"Couldn't create working folder.");
+            return NO;
+        }
+    
+    if (shouldCleanFolder) {
+        NSLog(@"Cleaning path: %@", path);
+        
+        NSFileManager* fm = [[NSFileManager alloc] init];
+        NSDirectoryEnumerator* en = [fm enumeratorAtPath:path];    
+        NSError* err = nil;
+        BOOL res;
+        
+        NSString* file;
+        while (file = [en nextObject]) {
+            res = [fm removeItemAtPath:[path stringByAppendingPathComponent:file] error:&err];
+            if (!res && err) {
+                NSLog(@"Hmm... %@", err);
+                return NO;
+            }
+        }
+    }
+    
+    NSString *dataString = [NSString stringWithContentsOfFile:[emlxFileURL path] encoding:NSUTF8StringEncoding error:nil];
+    
+    NSMutableArray *pathsArray = [[NSMutableArray alloc] init];
+    
+    while (YES) {
+        NSString *part = [dataString stringFromTheBeginningTo:@"--Apple-Mail="];
+        
+        if ([part containsString:@"Content-Transfer-Encoding: base64"]) {
+            NSLog(@"Part is base64-encoded attachment.");
+            
+            NSString *partToRemove = [part stringFromTheBeginningTo:@"\n\n"];
+            
+            NSString *filename = [partToRemove stringBetweenString:@"filename=" andString:@"\n"];
+            
+            if ([filename characterAtIndex:0] == [@"\"" characterAtIndex:0])
+                filename = [filename substringFromIndex:1];
+            
+            if ([filename characterAtIndex:(filename.length - 1)] == [@"\"" characterAtIndex:0])
+                filename = [filename substringToIndex:(filename.length - 2)];
+            
+            NSLog(@"The filename is %@.", filename);
+            
+            NSString *base64Str = [part stringByRemovingSubstring:partToRemove];
+            
+            NSData *attachmentData = [MEXBase64 decodeBase64WithString:base64Str];
+            
+            if ([attachmentData writeToFile:[path stringByAppendingPathComponent:filename] atomically:YES]) {
+                NSLog(@"Wrote attachment to disk: %@", [path stringByAppendingPathComponent:filename]);
+                [pathsArray addObject:[path stringByAppendingPathComponent:filename]];
+            } else
+                return NO;
+            
+        }
+        
+        NSLog(@"The current part: %@", part);
+        
+        if (!part)
+            break;
+        
+        dataString = [dataString stringByRemovingSubstring:part];
+        
+        dataString = [dataString substringFromIndex:13];
+    }
+    
+    return pathsArray.copy;
+}
+
+
 @end

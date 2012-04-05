@@ -21,6 +21,8 @@
 - (NSString *)stringFromTheBeginningTo:(NSString *)end;
 - (NSString *)stringBetweenString:(NSString *)start andString:(NSString *)end;
 
+- (NSString *)stringByStrippingHTMLTags;
+
 - (NSString *)stringByRemovingSubstring:(NSString *)substring;
 - (NSString *)stringByRemovingWhitespaces;
 - (NSString *)stringByRemovingLinebreaks;

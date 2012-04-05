@@ -33,6 +33,8 @@ typedef enum {
 - (NSArray *)bcc;
 - (NSArray *)attachments;
 
+- (NSArray *)attachmentPathsDumpedToFolder:(NSString *)path cleaningFolder:(BOOL)shouldCleanFolder;
+
 - (NSString *)sender;
 - (NSString *)subject;
 - (NSString *)messageBody;

@@ -39,6 +39,29 @@
     return nil;
 }
 
+- (NSString *)stringByStrippingHTMLTags {
+    NSMutableString *html = [NSMutableString stringWithCapacity:[self length]];
+    
+    NSScanner *scanner = [NSScanner scannerWithString:self];
+    NSString *tempText = nil;
+    
+    while (![scanner isAtEnd]) {
+        [scanner scanUpToString:@"<" intoString:&tempText];
+        
+        if (tempText != nil)
+            [html appendString:tempText];
+        
+        [scanner scanUpToString:@">" intoString:NULL];
+        
+        if (![scanner isAtEnd])
+            [scanner setScanLocation:[scanner scanLocation] + 1];
+        
+        tempText = nil;
+    }
+    
+    return html;
+}
+
 - (NSString *)stringByRemovingSubstring:(NSString *)substring {
     return [self stringByReplacingOccurrencesOfString:substring withString:@""];
 }
