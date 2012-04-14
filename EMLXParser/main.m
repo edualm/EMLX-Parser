@@ -25,7 +25,7 @@ int main(int argc, const char * argv[])
             
             NSLog(@"Message ID: %@", parser.messageID);
             
-            [parser dumpAttachmentsToFolder:[NSTemporaryDirectory() stringByAppendingPathComponent:@"EMLXParser"] cleaningFolder:YES];
+            //[parser attachmentPathsDumpedToFolder:[NSTemporaryDirectory() stringByAppendingPathComponent:@"EMLXParser"] cleaningFolder:YES];
             
             /*NSLog(@"Recipent: %@", parser.to);
             

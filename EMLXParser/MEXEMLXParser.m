@@ -245,7 +245,7 @@
     if (![[NSFileManager defaultManager] fileExistsAtPath:path])
         if (![[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil]) {
             NSLog(@"Couldn't create working folder.");
-            return NO;
+            return nil;
         }
     
     if (shouldCleanFolder) {
@@ -261,7 +261,7 @@
             res = [fm removeItemAtPath:[path stringByAppendingPathComponent:file] error:&err];
             if (!res && err) {
                 NSLog(@"Hmm... %@", err);
-                return NO;
+                return nil;
             }
         }
     }
@@ -296,7 +296,7 @@
                 NSLog(@"Wrote attachment to disk: %@", [path stringByAppendingPathComponent:filename]);
                 [pathsArray addObject:[path stringByAppendingPathComponent:filename]];
             } else
-                return NO;
+                return nil;
             
         }
         
