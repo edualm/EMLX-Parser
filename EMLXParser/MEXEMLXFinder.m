@@ -50,7 +50,7 @@
                     NSNumber *isDirectory = nil;
                     
                     if (! [url getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:&error])
-                        NSLog(@"Couldn't get EMLX.");
+                        NSLog(@"Couldn't get EMLX. Error: %@", error);
                     
                     else if (![isDirectory boolValue])
                         if ([[[url path] pathExtension] isEqual:@"emlx"]) {
