@@ -42,8 +42,6 @@
                                                      includingPropertiesForKeys:keys
                                                      options:0
                                                      errorHandler:^(NSURL *url, NSError *error) {
-                                                         // Handle the error.
-                                                         // Return YES if the enumeration should continue after the error.
                                                          return YES;
                                                      }];
                 
@@ -57,6 +55,9 @@
                     else if (![isDirectory boolValue])
                         if ([[[url path] pathExtension] isEqual:@"emlx"]) {
                             BOOL added = NO;
+                            
+                            if ([[url path] containsString:@"Deleted Messages.mbox"])
+                                added = YES;
                             
                             for (id aPath in paths)
                                 if ([aPath isEqual:url]) {
