@@ -68,16 +68,16 @@
     part = [part stringBetweenString:@"To: " andString:@"\n"];
     
     NSMutableArray *addresses = [[part componentsSeparatedByString:@"-next-"] mutableCopy];
+    NSMutableArray *fixedAddresses = [[NSMutableArray alloc] init];
     
     for (NSString *address in addresses) {
         if ([address characterAtIndex:0] == [@" " characterAtIndex:0]) {
             NSString *newAddr = [address stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:@""];
-            [addresses addObject:newAddr];
-            [addresses removeObject:address];
+            [fixedAddresses addObject:newAddr];
         }
     }
     
-    return addresses.copy;
+    return fixedAddresses.copy;
 }
 
 - (NSString *)sender {
@@ -104,16 +104,16 @@
     part = [part stringBetweenString:@"Cc: " andString:@"\n"];
     
     NSMutableArray *addresses = [[part componentsSeparatedByString:@"-next-"] mutableCopy];
+    NSMutableArray *fixedAddresses = [[NSMutableArray alloc] init];
     
     for (NSString *address in addresses) {
         if ([address characterAtIndex:0] == [@" " characterAtIndex:0]) {
             NSString *newAddr = [address stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:@""];
-            [addresses addObject:newAddr];
-            [addresses removeObject:address];
+            [fixedAddresses addObject:newAddr];
         }
     }
     
-    return addresses.copy;
+    return fixedAddresses.copy;
 }
 
 - (NSArray *)bcc {
@@ -129,16 +129,16 @@
     part = [part stringBetweenString:@"Bcc: " andString:@"\n"];
     
     NSMutableArray *addresses = [[part componentsSeparatedByString:@"-next-"] mutableCopy];
+    NSMutableArray *fixedAddresses = [[NSMutableArray alloc] init];
     
     for (NSString *address in addresses) {
         if ([address characterAtIndex:0] == [@" " characterAtIndex:0]) {
             NSString *newAddr = [address stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:@""];
-            [addresses addObject:newAddr];
-            [addresses removeObject:address];
+            [fixedAddresses addObject:newAddr];
         }
     }
     
-    return addresses.copy;
+    return fixedAddresses.copy;
 }
 
 - (NSString *)messageID {
@@ -238,7 +238,7 @@
     }
     
     return attachmentsArray;
-
+    
 }
 
 - (NSArray *)attachmentPathsDumpedToFolder:(NSString *)path cleaningFolder:(BOOL)shouldCleanFolder {
@@ -312,6 +312,5 @@
     
     return pathsArray.copy;
 }
-
 
 @end
